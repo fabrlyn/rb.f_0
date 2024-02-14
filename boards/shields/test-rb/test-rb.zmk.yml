@@ -1,0 +1,12 @@
+file_format: "1"
+id: test-rb
+name: test-rb
+type: shield
+url: https://github.com/fabrlyn
+requires: [pro_micro]
+exposes: []
+features:
+  - keys
+siblings:
+  - test-rb_left
+  - test-rb_right
