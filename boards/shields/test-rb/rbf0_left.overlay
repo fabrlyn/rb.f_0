@@ -1,4 +1,4 @@
-#include "test-rb.dtsi"
+#include "rbf0.dtsi"
 
 &kscan0 {
     col-gpios

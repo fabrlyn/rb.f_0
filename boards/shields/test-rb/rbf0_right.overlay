@@ -1,4 +1,4 @@
-#include "test-rb.dtsi"
+#include "rbf0.dtsi"
 
 &default_transform {
     col-offset = <6>;

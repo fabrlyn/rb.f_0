@@ -1,14 +1,14 @@
-if SHIELD_TEST_RB_LEFT
+if SHIELD_RBF0_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "test-rb"
+    default "rbf0"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
 
-if SHIELD_TEST_RB_LEFT || SHIELD_TEST_RB_RIGHT
+if SHIELD_RBF0_LEFT || SHIELD_RBF0_RIGHT
 
 config ZMK_SPLIT
     default y

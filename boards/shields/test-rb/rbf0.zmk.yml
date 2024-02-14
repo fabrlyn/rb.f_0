@@ -1,0 +1,12 @@
+file_format: "1"
+id: rbf0
+name: rbf0
+type: shield
+url: https://github.com/fabrlyn/keyboard_rb.f_0
+requires: [pro_micro]
+exposes: []
+features:
+  - keys
+siblings:
+  - rbf0_left
+  - rbf0_right
