@@ -139,6 +139,7 @@
 #define shf_esc &mt LEFT_SHIFT ESCAPE
 
 #define mo_num &mo NUMBERS
+#define mo_nav &mo NAVIGATION
 #define mo_sym &mo SYMBOLS
 
 &lt {
@@ -180,7 +181,7 @@
 
           lctrl   z       x       c       v       b         n       m       comma   period  space   rgui
 
-                                  lalt    mo_num  mo_sym    _       _       ralt
+                                  lalt    mo_num  mo_sym    mo_nav  _       ralt
         >;
     };
     symbols {
@@ -188,7 +189,7 @@
         <
           bang    at      hash    dollar  prct    caret     lparen  rparen  equal   plus    less    greater
 
-          qmark   _       uscore  minus   and     star      lbrace  rbrace  s_qoute d_qoute colon   semi
+          qmark   mo_num  uscore  minus   and     star      lbrace  rbrace  s_qoute d_qoute colon   semi
 
           _       _       _       _       tilde   grave     lbrckt  rbrckt  comma   dot     space   _
 
