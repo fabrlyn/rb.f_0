@@ -74,6 +74,8 @@
 #define caret   &kp CARET
 #define colon   &kp COLON
 #define comma   &kp COMMA
+#define copy    &kp K_COPY
+#define cut     &kp K_CUT
 #define d_qoute &kp DOUBLE_QUOTES
 #define dollar  &kp DOLLAR
 #define dot     &kp DOT
@@ -99,6 +101,7 @@
 #define next    &kp C_NEXT
 #define page_dw &kp PAGE_DOWN
 #define page_up &kp PAGE_UP
+#define paste   &kp K_PASTE
 #define period  &kp PERIOD
 #define pipe    &kp PIPE
 #define play    &kp C_PLAY_PAUSE
@@ -203,7 +206,7 @@
 
           _       brgh_dw brgh_up window  toolbox _         dot     n4      n5      n6      n0      _
 
-          _       _       _       _       _       _         _       n7      n8      n9      space   _
+          _       cut     copy    paste   _       _         _       n7      n8      n9      space   _
 
                                   _       _       _         _       _       _
         >;
