@@ -181,7 +181,7 @@
 
           lctrl   z       x       c       v       b         n       m       comma   period  space   rgui
 
-                                  lalt    mo_num  mo_sym    mo_nav  _       ralt
+                                  lalt    mo_num  mo_sym    mo_nav  mo_num  ralt
         >;
     };
     symbols {
@@ -199,11 +199,11 @@
     numbers {
       bindings =
         <
-          prev    mute    vol_dw  vol_up  play    next      _       n1      n2      n3      _       bksp
+          prev    mute    vol_dw  vol_up  play    next      comma   n1      n2      n3      _       bksp
 
-          _       brgh_dw brgh_up window  toolbox _         _       n4      n5      n6      n0      _
+          _       brgh_dw brgh_up window  toolbox _         dot     n4      n5      n6      n0      _
 
-          _       _       _       _       _       _         _       n7      n8      n9      _       _
+          _       _       _       _       _       _         _       n7      n8      n9      space   _
 
                                   _       _       _         _       _       _
         >;
