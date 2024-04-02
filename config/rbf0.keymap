@@ -182,9 +182,9 @@
 
           shf_esc a       s       d       f       g         h       j       k       l       rshift  enter
 
-          lctrl   z       x       c       v       b         n       m       comma   period  space   rgui
+          lctrl   z       x       c       v       b         n       m       comma   period  fslash  rgui
 
-                                  lalt    mo_num  mo_sym    mo_nav  mo_num  ralt
+                                  lalt    mo_num  space     mo_sym  mo_num  ralt
         >;
     };
     symbols {
@@ -196,7 +196,7 @@
 
           _       _       _       _       tilde   grave     lbrckt  rbrckt  comma   dot     space   _
 
-                                  _       _       _         fslash  pipe    bslash
+                                  _       _       _         _       pipe    bslash
         >;
     };
     numbers {
