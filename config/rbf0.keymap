@@ -131,6 +131,8 @@
 #define vol_up  &kp C_VOLUME_UP
 #define window  &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS
 
+#define boot    &bootloader
+
 #define bt0     &bt BT_SEL 0
 #define bt1     &bt BT_SEL 1
 #define bt2     &bt BT_SEL 2
@@ -142,9 +144,9 @@
 
 #define shf_esc &mt LEFT_SHIFT ESCAPE
 
-#define mo_num  &mo NUMBERS
-#define mo_fnum &mo F_NUMBERS
-#define mo_nav  &mo NAVIGATION
+#define mo_num    &mo NUMBERS
+#define mo_fnum   &mo F_NUMBERS
+#define mo_nav    &mo NAVIGATION
 #define mo_sym0   &mo SYMBOLS_0
 #define mo_sym1   &mo SYMBOLS_1
 
@@ -159,16 +161,6 @@
       timeout-ms = <50>;
       key-positions = <0 36>;
       bindings = <&mo BLUETOOTH>;
-    };
-    navigation_layer {
-      timeout-ms = <50>;
-      key-positions = <12 37>;
-      bindings = <&mo NAVIGATION>;
-    };
-    f_numbers_layer {
-      timeout-ms = <50>;
-      key-positions = <37 40>;
-      bindings = <&mo F_NUMBERS>;
     };
     left_gui {
       timeout-ms = <50>;
@@ -195,11 +187,11 @@
         <
           bang    at      hash    dollar  prct    caret     and     star    lparen   rparen minus   bksp
 
-          qmark   mo_sym1 mo_num  _       _       _         tilde   equal   lbrace   rbrace s_qoute semi
+          qmark   mo_sym1 mo_num  _       _       _         _       equal   lbrace   rbrace s_qoute semi
 
-          _       _       _       _       _       _         _       _       _        _      bslash  grave 
+          _       _       _       _       _       _         _       grave   comma    period  bslash  tilde
 
-                                  _       _       _         _       mo_sym1   _ 
+                                  _       _       _         space   mo_sym1   _
         >;
     };
     symbols_1 {
@@ -209,9 +201,9 @@
 
           _       _       _       _       _       _         _       _       less    greater d_qoute colon 
 
-          _       _       _       _       _       _         _       _       comman  period  pipe    _
+          _       _       _       _       _       _         _       _       comma   period  pipe    _
 
-                                  _       _       _         _       _       _ 
+                                  _       _       _         space   _       _
         >;
     };
     numbers {
@@ -219,17 +211,17 @@
         <
           prev    mute    vol_dw  vol_up  play    next      _       n1      n2      n3      _       bksp
 
-          mo_fnum window  brgh_dw brgh_up toolbox _         _       n4      n5      n6      n0      _
+          window mo_fnum brgh_dw brgh_up toolbox  _         _       n4      n5      n6      n0      _
 
-          _       cut     copy    paste   _       _         _       n7      n8      n9      _       _
+          _       _       _       _       _       _         _       n7      n8      n9      _       _
 
-                                  _       _       _         _       _       _
+                                  _       _       _         space   _       _
         >;
     };
     f_numbers {
       bindings =
         <
-          _       _       _       _       _       _         _       fn1     fn2     fn3     fn10    _
+          _       _       _       _       _       _         _       fn1     fn2     fn3     fn10    bksp
 
           _       _       _       _       _       _         _       fn4     fn5     fn6     fn11    _
 
@@ -241,9 +233,9 @@
     navigation {
       bindings =
         <
-          _       _       _       _       _       _         _       _       _       _       end     home
+          _       _       _       _       _       _         _       _       _       _       _       bksp
 
-          _       _       _       _       _       _         left   down     up      right   page_dw page_up
+          shf_esc _       _       _       _       _         left   down     up      right   _       _
 
           _       _       _       _       _       _         _       _       _       _       _       _
 
@@ -259,7 +251,7 @@
 
           _       _       _       _       _       _         _       _       _       _       _       _
 
-                                  _       _       _         lock    bt_clr  _
+                                  _       _       boot     lock    bt_clr  _
         >;
     };
   };
