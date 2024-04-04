@@ -3,11 +3,12 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT    0
-#define SYMBOLS    1
-#define NUMBERS    2
-#define F_NUMBERS  3
-#define NAVIGATION 4
-#define BLUETOOTH  5
+#define SYMBOLS_0  1
+#define SYMBOLS_1  2
+#define NUMBERS    3
+#define F_NUMBERS  4
+#define NAVIGATION 5
+#define BLUETOOTH  6
 
 #define _ &none
 
@@ -141,9 +142,11 @@
 
 #define shf_esc &mt LEFT_SHIFT ESCAPE
 
-#define mo_num &mo NUMBERS
-#define mo_nav &mo NAVIGATION
-#define mo_sym &mo SYMBOLS
+#define mo_num  &mo NUMBERS
+#define mo_fnum &mo F_NUMBERS
+#define mo_nav  &mo NAVIGATION
+#define mo_sym0   &mo SYMBOLS_0
+#define mo_sym1   &mo SYMBOLS_1
 
 &lt {
   tapping-term-ms = <150>;
@@ -184,19 +187,31 @@
 
           lctrl   z       x       c       v       b         n       m       comma   period  fslash  rgui
 
-                                  lalt    mo_num  space     mo_sym  mo_num  ralt
+                                  lalt    mo_sym0   space     mo_num  mo_nav  ralt
         >;
     };
-    symbols {
+    symbols_0 {
       bindings =
         <
-          bang    at      hash    dollar  prct    caret     lparen  rparen  equal   plus    less    greater
+          bang    at      hash    dollar  prct    caret     and     star    lparen   rparen minus   bksp
 
-          qmark   mo_num  uscore  minus   and     star      lbrace  rbrace  s_qoute d_qoute colon   semi
+          qmark   mo_sym1   mo_num  _       _       _         tilde   equal   lbrace   rbrace s_qoute semi
 
-          _       _       _       _       tilde   grave     lbrckt  rbrckt  comma   dot     space   _
+          _       _       _       _       _       _         _       _       _        _      bslash  grave 
 
-                                  _       _       _         _       pipe    bslash
+                                  _       _       _         _       mo_sym1   _ 
+        >;
+    };
+    symbols_1 {
+      bindings =
+        <
+          _       _       _       _       _       _         _       _       lbrckt  rbrckt  uscore  bksp 
+
+          _       _       _       _       _       _         _       _       less    greater d_qoute colon 
+
+          _       _       _       _       _       _         _       _       _       _       pipe    _
+
+                                  _       _       _         _       _       _ 
         >;
     };
     numbers {
@@ -204,9 +219,9 @@
         <
           prev    mute    vol_dw  vol_up  play    next      comma   n1      n2      n3      _       bksp
 
-          _       brgh_dw brgh_up window  toolbox _         dot     n4      n5      n6      n0      _
+          mo_fnum window  brgh_dw brgh_up toolbox _         dot     n4      n5      n6      n0      _
 
-          _       cut     copy    paste   _       _         _       n7      n8      n9      space   _
+          _       cut     copy    paste   _       _         _       n7      n8      n9      _       _
 
                                   _       _       _         _       _       _
         >;
