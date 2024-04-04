@@ -187,7 +187,7 @@
 
           lctrl   z       x       c       v       b         n       m       comma   period  fslash  rgui
 
-                                  lalt    mo_sym0   space     mo_num  mo_nav  ralt
+                                  lalt    mo_sym0 space     mo_nav  mo_num  ralt
         >;
     };
     symbols_0 {
@@ -195,7 +195,7 @@
         <
           bang    at      hash    dollar  prct    caret     and     star    lparen   rparen minus   bksp
 
-          qmark   mo_sym1   mo_num  _       _       _         tilde   equal   lbrace   rbrace s_qoute semi
+          qmark   mo_sym1 mo_num  _       _       _         tilde   equal   lbrace   rbrace s_qoute semi
 
           _       _       _       _       _       _         _       _       _        _      bslash  grave 
 
@@ -209,7 +209,7 @@
 
           _       _       _       _       _       _         _       _       less    greater d_qoute colon 
 
-          _       _       _       _       _       _         _       _       _       _       pipe    _
+          _       _       _       _       _       _         _       _       comman  period  pipe    _
 
                                   _       _       _         _       _       _ 
         >;
@@ -217,9 +217,9 @@
     numbers {
       bindings =
         <
-          prev    mute    vol_dw  vol_up  play    next      comma   n1      n2      n3      _       bksp
+          prev    mute    vol_dw  vol_up  play    next      _       n1      n2      n3      _       bksp
 
-          mo_fnum window  brgh_dw brgh_up toolbox _         dot     n4      n5      n6      n0      _
+          mo_fnum window  brgh_dw brgh_up toolbox _         _       n4      n5      n6      n0      _
 
           _       cut     copy    paste   _       _         _       n7      n8      n9      _       _
 
