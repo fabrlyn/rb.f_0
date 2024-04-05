@@ -167,6 +167,11 @@
       key-positions = <24 37>;
       bindings = <&kp LEFT_GUI>;
     };
+    caps_word {
+      timeout-ms = <50>;
+      key-positions = <12 22>;
+      bindings = <&caps_word>;
+    };
   };
   keymap {
     compatible = "zmk,keymap";
