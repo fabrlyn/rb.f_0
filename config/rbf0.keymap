@@ -143,12 +143,17 @@
 #define bt_prev &bt BT_PRV
 
 #define shf_esc &mt LEFT_SHIFT ESCAPE
+#define shf_col &mt RIGHT_SHIFT COLON
 
 #define mo_num    &mo NUMBERS
 #define mo_fnum   &mo F_NUMBERS
 #define mo_nav    &mo NAVIGATION
 #define mo_sym0   &mo SYMBOLS_0
 #define mo_sym1   &mo SYMBOLS_1
+
+&mt {
+  tapping-term-ms = <250>;
+};
 
 &lt {
   tapping-term-ms = <150>;
@@ -180,7 +185,7 @@
         <
           tab     q       w       e       r       t         y       u       i       o       p       bksp
 
-          shf_esc a       s       d       f       g         h       j       k       l       rshift  enter
+          shf_esc a       s       d       f       g         h       j       k       l       shf_col enter
 
           lctrl   z       x       c       v       b         n       m       comma   period  fslash  rgui
 
