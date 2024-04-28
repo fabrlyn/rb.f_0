@@ -97,6 +97,7 @@
 #define less    &kp LESS_THAN
 #define lock    &kp C_AL_LOCK
 #define lparen  &kp LEFT_PARENTHESIS
+#define lshift  &kp LEFT_SHIFT
 #define minus   &kp MINUS
 #define mute    &kp C_MUTE
 #define next    &kp C_NEXT
@@ -142,12 +143,12 @@
 #define bt_next &bt BT_NXT
 #define bt_prev &bt BT_PRV
 
-#define shf_esc &mt LEFT_SHIFT ESCAPE
+#define nav_esc &lt NAVIGATION ESCAPE
 #define shf_col &mt RIGHT_SHIFT COLON
 
-#define mo_num    &mo NUMBERS
 #define mo_fnum   &mo F_NUMBERS
 #define mo_nav    &mo NAVIGATION
+#define mo_num    &mo NUMBERS
 #define mo_sym0   &mo SYMBOLS_0
 #define mo_sym1   &mo SYMBOLS_1
 
@@ -185,11 +186,11 @@
         <
           tab     q       w       e       r       t         y       u       i       o       p       bksp
 
-          shf_esc a       s       d       f       g         h       j       k       l       shf_col enter
+          lshift  a       s       d       f       g         h       j       k       l       shf_col enter
 
           lctrl   z       x       c       v       b         n       m       comma   period  fslash  rgui
 
-                                  lalt    mo_sym0 space     mo_nav  mo_num  ralt
+                                  lalt    mo_sym0 space     nav_esc mo_num  ralt
         >;
     };
     symbols_0 {
@@ -245,7 +246,7 @@
         <
           _       _       _       _       _       _         _       _       _       _       _       bksp
 
-          shf_esc _       _       _       _       _         left   down     up      right   _       _
+          _       _       _       _       _       _         left   down     up      right   _       _
 
           _       _       _       _       _       _         _       _       _       _       _       _
 
