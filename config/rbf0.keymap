@@ -3,12 +3,11 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT    0
-#define SYMBOLS_0  1
-#define SYMBOLS_1  2
-#define NUMBERS    3
-#define F_NUMBERS  4
-#define NAVIGATION 5
-#define BLUETOOTH  6
+#define SYMBOLS    1
+#define NUMBERS    2
+#define F_NUMBERS  3
+#define NAVIGATION 4
+#define BLUETOOTH  5
 
 #define _ &none
 
@@ -143,14 +142,13 @@
 #define bt_next &bt BT_NXT
 #define bt_prev &bt BT_PRV
 
-#define nav_esc &lt NAVIGATION ESCAPE
-#define shf_col &mt RIGHT_SHIFT COLON
+#define nav_esc  &lt NAVIGATION ESCAPE
+#define shf_scl &mt RIGHT_SHIFT SEMICOLON
 
-#define mo_fnum   &mo F_NUMBERS
-#define mo_nav    &mo NAVIGATION
-#define mo_num    &mo NUMBERS
-#define mo_sym0   &mo SYMBOLS_0
-#define mo_sym1   &mo SYMBOLS_1
+#define mo_fnum &mo F_NUMBERS
+#define mo_nav  &mo NAVIGATION
+#define mo_num  &mo NUMBERS
+#define mo_sym  &mo SYMBOLS
 
 &mt {
   tapping-term-ms = <250>;
@@ -186,35 +184,23 @@
         <
           tab     q       w       e       r       t         y       u       i       o       p       bksp
 
-          lshift  a       s       d       f       g         h       j       k       l       shf_col enter
+          lshift  a       s       d       f       g         h       j       k       l       shf_scl enter
 
           lctrl   z       x       c       v       b         n       m       comma   period  fslash  rgui
-
-                                  lalt    mo_sym0 space     nav_esc mo_num  ralt
+        
+                                  lalt    mo_sym space     nav_esc mo_num  ralt
         >;
     };
     symbols_0 {
       bindings =
         <
-          bang    at      hash    dollar  prct    caret     and     star    lparen   rparen minus   bksp
+          bang    at      hash    dollar  prct    caret     and     star    lparen  rparen minus   bksp
 
-          qmark   mo_sym1 mo_num  _       _       _         _       equal   lbrace   rbrace s_qoute semi
+          _       _       mo_num  _       enter   _         plus    equal   lbrace  rbrace d_qoute s_qoute 
 
-          _       _       _       _       _       _         _       grave   comma    period  bslash  tilde
+          _       _       _       _       _       _         grave   uscore  lbrckt  rbrckt bslash  tilde
 
-                                  _       _       _         space   mo_sym1   _
-        >;
-    };
-    symbols_1 {
-      bindings =
-        <
-          _       _       _       _       _       _         _       _       lbrckt  rbrckt  uscore  bksp 
-
-          _       _       _       _       _       _         _       plus    less    greater d_qoute colon
-
-          _       _       _       _       _       _         _       _       comma   period  pipe    _
-
-                                  _       _       _         space   _       _
+                                  _       _       _         space   pipe    _
         >;
     };
     numbers {
