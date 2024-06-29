@@ -1,5 +1,0 @@
-config SHIELD_RBF0_LEFT
-    def_bool $(shields_list_contains,rbf0_left)
-
-config SHIELD_RBF0_RIGHT
-    def_bool $(shields_list_contains,rbf0_right)

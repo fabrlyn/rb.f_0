@@ -56,13 +56,13 @@
     default {
       bindings =
         <
-          tab     q       w       e       r       t         y       u       i       o       p       bksp
+          tab     q       w       e       r       t 
 
-          shf_esc a       s       d       f       g         h       j       k       l       rshift  enter
+          shf_esc a       s       d       f       g 
 
-          lctrl   z       x       c       v       b         n       m       comma   period  _       rgui
+          lctrl   z       x       c       v       b 
 
-                                  lalt    _       _         space   _       ralt
+                                  lalt    _       _ 
         >;
     };
   };

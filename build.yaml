@@ -1,6 +1,4 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: rbf0_left
-  - board: nice_nano_v2
-    shield: rbf0_right
+    shield: rbf1
