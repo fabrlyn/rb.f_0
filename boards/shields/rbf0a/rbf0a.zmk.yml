@@ -1,11 +1,11 @@
 file_format: "1"
-id: rbf1
-name: rbf1
+id: rbf0a
+name: rbf0a
 type: shield
-url: https://github.com/fabrlyn/keyboard_rb.f_1
+url: https://github.com/fabrlyn/keyboard_rb.f_0a
 requires: [pro_micro]
 exposes: []
 features:
   - keys
 siblings:
-  - rbf1
+  - rbf0a

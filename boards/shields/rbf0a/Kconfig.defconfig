@@ -1,0 +1,6 @@
+if SHIELD_RBF0A
+
+config ZMK_KEYBOARD_NAME
+    default "rbf0a"
+
+endif

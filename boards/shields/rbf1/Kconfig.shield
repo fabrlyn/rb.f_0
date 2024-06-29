@@ -1,2 +1,0 @@
-config SHIELD_RBF1
-    def_bool $(shields_list_contains,rbf1)

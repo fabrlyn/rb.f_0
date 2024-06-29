@@ -1,6 +1,0 @@
-if SHIELD_RBF1
-
-config ZMK_KEYBOARD_NAME
-    default "rbf1"
-
-endif
