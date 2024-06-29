@@ -3,6 +3,9 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT    0
+#define RIGHT_SIDE 1
+#define NUMBERS    2
+#define SYSTEM     3
 
 #define _ &none
 
@@ -108,11 +111,13 @@
 #define rgui    &kp RIGHT_GUI
 #define right   &kp RIGHT
 #define rparen  &kp RIGHT_PARENTHESIS
+#define lshift  &kp LEFT_SHIFT
 #define rshift  &kp RIGHT_SHIFT
 #define s_qoute &kp SINGLE_QUOTE
 #define semi    &kp SEMICOLON
 #define space   &kp SPACE
 #define star    &kp ASTERISK
+#define escape  &kp ESCAPE
 #define tab     &kp TAB
 #define tilde   &kp TILDE
 #define toolbox &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS
@@ -131,13 +136,37 @@
 #define bt_next &bt BT_NXT
 #define bt_prev &bt BT_PRV
 
-#define shf_esc &mt LEFT_SHIFT ESCAPE
+#define mo_num  &mo NUMBERS
+#define mo_rght &mo RIGHT_SIDE
+
+#define boot    &bootloader
+
+#define shf_scl &mt RIGHT_SHIFT SEMICOLON
+#define alt_esc &mt LEFT_ALT    ESCAPE
 
 &lt {
   tapping-term-ms = <150>;
 };
 
 / {
+  combos {
+    compatible = "zmk,combos";
+    bluetooth_layer {
+      timeout-ms = <50>;
+      key-positions = <0 18>;
+      bindings = <&mo SYSTEM>;
+    };
+    numbers {
+      timeout-ms = <50>;
+      key-positions = <6 19>;
+      bindings = <&mo NUMBERS>;
+    };
+    esc {
+      timeout-ms = <50>;
+      key-positions = <0 19>;
+      bindings = <&kp ESCAPE>;
+    };
+  };
   keymap {
     compatible = "zmk,keymap";
     default {
@@ -145,11 +174,47 @@
         <
           tab     q       w       e       r       t     
 
-          shf_esc a       s       d       f       g     
+          lshift  a       s       d       f       g     
 
           lctrl   z       x       c       v       b     
 
-                                  _       _       space
+                                  lalt    mo_rght space
+        >;
+    };
+    right_side{
+      bindings =
+        <
+          bksp    p       o       i       u       y
+
+          enter   shf_scl l       k       j       h
+
+          rgui    fslash  period  comma   m       n
+        
+                                  _        _      _ 
+        >;
+    };
+    numbers {
+      bindings =
+        <
+          _       n1      n2      n3      _       _
+
+          _       n4      n5      n6      n0      _
+
+          _       n7      n8      n9      _       _
+
+                                  _       _       _ 
+        >;
+    };
+    system {
+      bindings =
+        <
+          _       _       _       _       _       _     
+
+          _       _       _       _       _       _     
+
+          _       _       _       _       _       _
+
+                                  _       _       boot
         >;
     };
   };
